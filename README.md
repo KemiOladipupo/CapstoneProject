@@ -8,6 +8,7 @@ A modern event decoration and styling website showcasing beautiful event experie
 
 - Responsive modern UI (mobile, tablet, desktop)
 - Dynamic service cards section
+  -FAQ Accordion
 - Animated UI interactions (hover + scroll effects)
 - Testimonials section with ratings
 - Image integration using local assets / API support
@@ -29,6 +30,7 @@ A modern event decoration and styling website showcasing beautiful event experie
 ---
 
 ## 📁 Project Structure
+
 src/
 │
 ├── components/
@@ -37,8 +39,6 @@ src/
 ├── images/
 ├── App.jsx
 └── main.jsx
-
-
 
 ---
 
@@ -82,3 +82,4 @@ Frontend Developer
 All images are optimized for web performance
 Components are reusable and scalable
 Project is structured for maintainability and future expansion
+```
