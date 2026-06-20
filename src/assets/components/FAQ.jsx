@@ -5,6 +5,7 @@ import {
   Typography,
   Container,
 } from "@mui/material";
+import { div } from "framer-motion/client";
 import { BiExpand } from "react-icons/bi";
 import { CgExpand } from "react-icons/cg";
 
@@ -41,47 +42,53 @@ const faqData = [
 
 function FAQ() {
   return (
-    <Container maxWidth="md" sx={{ py: 6 }}>
-      <Typography variant="h4" fontWeight={600} gutterBottom>
-        Frequently Asked Questions
-      </Typography>
-
-      {faqData.map((item, index) => (
-        <Accordion
-          key={index}
-          disableGutters
-          elevation={0}
-          square
-          sx={{
-            border: "1px solid #e5e7eb",
-            mb: 1.5,
-            "&:before": { display: "none" }, // removes default line
-            borderRadius: "10px",
-            overflow: "hidden",
-          }}
+    <div className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] bg-[var(--text-color)]">
+      <Container maxWidth="md" sx={{ py: 6 }}>
+        <Typography
+          variant="h4"
+          fontWeight={600}
+          gutterBottom
+          className="text-xl md:text-4xl lg:text-6xl font-bold uppercase leading-tight  mt-4 text-[var(--textColor)] text-center"
         >
-          <AccordionSummary
-            expandIcon={<MdExpandCircleDown className="text-[var(--main-color)]" />}
+          Frequently Asked Questions
+        </Typography>
+
+        {faqData.map((item, index) => (
+          <Accordion
+            key={index}
+            disableGutters
+            elevation={0}
+            square
             sx={{
-              backgroundColor: "#fff",
-              "&:hover": { backgroundColor: "#f9fafb" },
-              px: 2,
+              border: "1px solid #e5e7eb",
+              mb: 1.5,
+              "&:before": { display: "none" },
+              borderRadius: "10px",
+              overflow: "hidden",
             }}
           >
-            <Typography fontWeight={500}>
-              {item.question}
-            </Typography>
-          </AccordionSummary>
+            <AccordionSummary
+              expandIcon={
+                <MdExpandCircleDown className="text-[var(--tertiary-color)]" />
+              }
+              sx={{
+                backgroundColor: "#fff",
+                "&:hover": { backgroundColor: "#f9fafb" },
+                px: 2,
+              }}
+            >
+              <Typography fontWeight={500}>{item.question}</Typography>
+            </AccordionSummary>
 
-          <AccordionDetails sx={{ px: 2, pb: 2 }}>
-            <Typography variant="body2" color="text.secondary">
-              {item.answer}
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </Container>
+            <AccordionDetails sx={{ px: 2, pb: 2 }}>
+              <Typography variant="body2" color="text.secondary">
+                {item.answer}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </Container>
+    </div>
   );
-  
 }
-export default FAQ
+export default FAQ;

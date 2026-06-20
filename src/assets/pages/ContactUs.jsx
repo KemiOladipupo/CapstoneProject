@@ -5,8 +5,8 @@ import Footer from "../components/Footer"
 function ContactUs () {
 return(
     <>
-    <FAQ/>
     <Contact/>
+    <FAQ/>
     <Footer/>
     </>
 )
