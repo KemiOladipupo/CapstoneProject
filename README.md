@@ -1,16 +1,84 @@
-# React + Vite
+# 🎉 Toriah Daisy Events
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern event decoration and styling website showcasing beautiful event experiences such as weddings, birthdays, proposals, and custom decorations. Built with React and Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- Responsive modern UI (mobile, tablet, desktop)
+- Dynamic service cards section
+- Animated UI interactions (hover + scroll effects)
+- Testimonials section with ratings
+- Image integration using local assets / API support
+- Clean component-based architecture
+- Reusable hooks and UI patterns
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Vite
+- React Router DOM
+- Tailwind CSS
+- React Icons
+- JavaScript (ES6+)
+- Unsplash API (for dynamic images - optional)
+
+---
+
+## 📁 Project Structure
+src/
+│
+├── components/
+├── pages/
+├── hooks/
+├── images/
+├── App.jsx
+└── main.jsx
+
+
+
+---
+
+## 🚀 Setup Guide
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/toriah-daisy-events.git
+
+2. Navigate into the project
+cd toriah-daisy-events
+
+3. Install dependencies
+npm install
+
+4. Create environment variables (if needed)
+
+Create a .env file in the root:
+
+VITE_UNSPLASH_ACCESS_KEY=your_api_key_here
+
+5. Run the development server
+npm run dev
+
+6. Build for production
+npm run build
+
+🌐 Deployment
+
+This project is deployed using Vercel with automatic CI/CD from GitHub.
+
+Every push to the main branch triggers a new deployment automatically.
+
+👩🏽‍💻 Author
+
+Built by Oladipupo Oluwakemi
+Frontend Developer
+
+📌 Notes
+All images are optimized for web performance
+Components are reusable and scalable
+Project is structured for maintainability and future expansion

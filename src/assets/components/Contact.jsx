@@ -15,13 +15,13 @@ function Contact() {
             <p className="text-[var(--tertiary-color)] uppercase font-medium tracking-widest text-sm md:text-lg lg:text-xl">
               Contact Us
             </p>
-
-            {/* <h1 className="text-xl md:text-4xl lg:text-6xl font-semibold uppercase leading-tighter  mt-4 text-[var(--textColor)] flex">
-              Curating Memorable Experiences
-            </h1> */}
-            <div className="flex items-center gap-3">
-              <FaInstagram className="text-3xl" />
-              <p className="text-base md:text-md text-[var(--textColor)]">@toriahdaisy_events</p>
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex">
+                <FaInstagram className="text-3xl" />
+                <p className="text-base md:text-md text-[var(--textColor)]">
+                  @toriahdaisy_events
+                </p>
+              </div>
             </div>
           </div>
 
