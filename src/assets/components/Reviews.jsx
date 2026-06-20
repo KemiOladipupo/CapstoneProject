@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BsStarFill } from "react-icons/bs";
 import user1 from "../images/user1.jpg";
 import user2 from "../images/user2.jpg";
-import userMan from "../images/user-Man.jpg";
+import userMan from "../images/user-man.jpg";
 import hero from "../images/daisy.jpg";
 
 function Reviews() {
