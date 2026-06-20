@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { BsStarFill } from "react-icons/bs";
 import user1 from "../images/user1.jpg";
 import user2 from "../images/user2.jpg";
-import userMan from "../images/user-man.jpg";
+import user3 from "../images/user3.jpg";
+import userMan from "../images/user-man.jpg"; 
 import hero from "../images/daisy.jpg";
 
 function Reviews() {
@@ -30,9 +31,17 @@ function Reviews() {
         {
           id: 3,
           name: "Miss Chika",
-          text: "Beautiful setup for my birthday. I loved every detail!",
+          text: "Beautiful setup for my birthday. I absolutely loved every detail!",
           rating: 4,
           image: user2,
+          variant: "default",
+        },
+        {
+          id: 4,
+          name: "Miss Naomi",
+          text: "Beautiful setup for my mum's birthday. Toriah is very detailed and thorough",
+          rating: 4,
+          image: user3,
           variant: "default",
         },
       ],
@@ -46,7 +55,7 @@ function Reviews() {
       className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px]"
       style={{ backgroundImage: `url(${hero})`}}
     >
-      <div className="absolute inset-0 bg-[var(--textColor)]/80"></div>
+      <div className="absolute inset-0 bg-[var(--textColor)]/70"></div>
       <div className="max-w-6xl mx-auto flex flex-col gap-10 ">
         <div className="text-center space-y-3 z-10">
           <p className="text-[var(--tertiary-color)] uppercase tracking-widest text-sm md:text-lg font-medium z-10">
@@ -64,11 +73,11 @@ function Reviews() {
         </div>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4 md:place-self-center">
           {reviews.map((review, index) => (
             <div
               key={review.id}
-              className={`group relative flex flex-col items-center text-center p-6 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl
+              className={`group relative flex flex-col items-center text-center p-6 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl md:max-w-[400px]
               ${
                 review.variant === "purple"
                   ? "bg-[var(--main-color)] text-white"

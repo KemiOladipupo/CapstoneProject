@@ -3,7 +3,7 @@ import aboutImg from "../images/proposal.jpg";
 function About() {
   return (
     <>
-      <section className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] lg:py-[100px] bg-[var(--by)]">
+      <section className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--by)]">
         <div className="flex flex-col lg:flex-row gap-10 max-w-6xl mx-auto">
          {/* Text */}
           <div className="text-center lg:text-start">
