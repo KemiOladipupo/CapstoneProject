@@ -64,7 +64,7 @@ function Contact() {
     <section className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--by)]">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10">
         {/* LEFT SIDE */}
-        <div className="flex flex-col lg:text-start justify-center items-center md:items-start">
+        <div className="flex flex-col lg:text-start">
           <p className="text-[var(--tertiary-color)] uppercase font-medium tracking-widest text-sm md:text-lg lg:text-xl text-center lg:text-start">
             Contact Us
           </p>

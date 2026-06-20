@@ -4,6 +4,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import logo from "../images/logo.png";
 import { div } from "framer-motion/client";
+import contactUs from "../pages/ContactUs";
+import AboutUs from "../pages/AboutUs";
+
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,11 +17,11 @@ function NavBar() {
     },
     {
       item: "About",
-      href: "/about",
+      href: "/aboutUs",
     },
     {
       item: "Services",
-      href: "/services",
+      href: "/ourServices",
     },
     {
       item: "Gallery",
@@ -26,7 +29,7 @@ function NavBar() {
     },
     {
       item: "Contact",
-      href: "/contact",
+      href: "/contactUs",
     },
   ];
   return (
