@@ -4,14 +4,14 @@ import birthday from "../images/birthday.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 
-function Services() {
+function Services({className = ""}) {
   const Cards = [
     { id: 1, image: bgFlower, title: "Weddings" },
 
     { id: 2, image: birthday, title: "Birthdays" },
   ];
   return (
-    <section className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--main-color)] h-full">
+    <section className={`px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--main-color)] h-full ${className}`}>
       <div className="flex flex-col lg:flex-row gap-10 max-w-6xl mx-auto">
         {/* text  */}
         <motion.div

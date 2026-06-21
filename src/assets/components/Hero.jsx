@@ -1,4 +1,4 @@
-import bg from "../images/bg.jpg";
+import bg from "../images/table.avif";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div
       className="relative h-[500px] lg:min-h-[90vh] w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bg})`, backgroundPositionY: -40 }}
+      style={{ backgroundImage: `url(${bg})`, backgroundPosition: "center" }}
     >
       <div className="absolute inset-0 bg-black/70"></div>
 
@@ -20,7 +20,7 @@ function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl text-white text-center  leading-[1.2]"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold max-w-4xl text-white text-center leading-[1.2]"
         >
           Make your Special Events Unforgettable
         </motion.h1>

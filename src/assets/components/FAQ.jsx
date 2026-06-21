@@ -41,10 +41,10 @@ const faqData = [
   },
 ];
 
-function FAQ() {
+function FAQ({className=""}) {
   return (
-    <div className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] bg-[var(--text-color)]">
-      <Container maxWidth="md" sx={{ py: 6 }}>
+    <section className={`px-[16px] md:px-[60px] lg:px-[100px] py-[30px] bg-[var(--text-color)] ${className}` }>
+      <Container maxWidth="md" sx={{ py: 6, mt:8 }}>
         <Typography
           variant="h4"
           fontWeight={600}
@@ -61,6 +61,7 @@ function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
+            className="mt-4"
           >
           <Accordion
             key={index}
@@ -97,7 +98,7 @@ function FAQ() {
           </motion.div>
         ))}
       </Container>
-    </div>
+    </section>
   );
 }
 export default FAQ;
