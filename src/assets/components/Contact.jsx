@@ -1,6 +1,7 @@
 import { BsInstagram, BsTelephone, BsEnvelope } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   const [form, setForm] = useState({
@@ -61,10 +62,20 @@ function Contact() {
   ];
 
   return (
-    <section className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--by)]">
+    <motion.section 
+    initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px] bg-[var(--by)]">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10">
         {/* LEFT SIDE */}
-        <div className="flex flex-col lg:text-start">
+        <motion.div 
+        initial={{ x: -60, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        className="flex flex-col lg:text-start">
           <p className="text-[var(--tertiary-color)] uppercase font-medium tracking-widest text-sm md:text-lg lg:text-xl text-center lg:text-start">
             Contact Us
           </p>
@@ -82,18 +93,28 @@ function Contact() {
           {contacts.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.id} className="flex items-center gap-3">
+              <motion.div key={item.id}
+              initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: item * 0.2, duration: 0.5 }}
+                  viewport={{ once: true }}
+              className="flex items-center gap-3">
                 <Icon className="text-sm lg:text-lg text-[var(--tertiary-color)]" />
-                <p className="text-sm md:text-base cursor-pointer">{item.text}</p>
-              </div>
+                <p className="text-sm md:text-base cursor-pointer hover:text-[var(--tertiary-color)]">{item.text}</p>
+              </motion.div>
             );
           })}
         </div>
-        </div>
+        </motion.div>
         
 
-        {/* RIGHT SIDE - COMPACT FORM CARD */}
-        <div className="w-full max-w-[500px] mx-auto lg:mx-0 bg-white rounded-xl p-5 shadow-lg">
+        {/* form card */}
+        <motion.div 
+        initial={{ x: 60, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        className="w-full max-w-[500px] mx-auto lg:mx-0 bg-white rounded-xl p-5 shadow-lg">
           <form onSubmit={handleSubmit} className="space-y-3 text-gray-600">
             {/* Name */}
             <div>
@@ -185,9 +206,9 @@ function Contact() {
             </button>
            
           </form>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

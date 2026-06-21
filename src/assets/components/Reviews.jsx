@@ -3,8 +3,9 @@ import { BsStarFill } from "react-icons/bs";
 import user1 from "../images/user1.jpg";
 import user2 from "../images/user2.jpg";
 import user3 from "../images/user3.jpg";
-import userMan from "../images/user-man.jpg"; 
+import userMan from "../images/user-man.jpg";
 import hero from "../images/daisy.jpg";
+import { motion } from "framer-motion";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
@@ -51,13 +52,23 @@ function Reviews() {
   }, []);
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
       className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px]"
-      style={{ backgroundImage: `url(${hero})`}}
+      style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="absolute inset-0 bg-[var(--textColor)]/70"></div>
       <div className="max-w-6xl mx-auto flex flex-col gap-10 ">
-        <div className="text-center space-y-3 z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center space-y-3 z-10"
+        >
           <p className="text-[var(--tertiary-color)] uppercase tracking-widest text-sm md:text-lg font-medium z-10">
             Testimonials
           </p>
@@ -70,13 +81,17 @@ function Reviews() {
             Real experiences from clients who trusted us to bring their events
             to life.
           </p>
-        </div>
+        </motion.div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4 md:place-self-center">
           {reviews.map((review, index) => (
-            <div
-              key={review.id}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
               className={`group relative flex flex-col items-center text-center p-6 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl md:max-w-[400px]
               ${
                 review.variant === "purple"
@@ -88,9 +103,11 @@ function Reviews() {
               }}
             >
               {/* image */}
-              <img
+              <motion.img
                 src={review.image}
                 alt={review.name}
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.3 }}
                 className="w-16 h-16 rounded-full object-cover mb-3 z-10"
               />
 
@@ -116,11 +133,11 @@ function Reviews() {
 
               {/* NAME */}
               <h3 className="mt-4 font-semibold text-lg z-10">{review.name}</h3>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

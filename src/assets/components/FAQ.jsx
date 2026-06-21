@@ -11,6 +11,7 @@ import { CgExpand } from "react-icons/cg";
 
 import { FaExpand } from "react-icons/fa";
 import { MdExpandCircleDown } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const faqData = [
   {
@@ -54,6 +55,13 @@ function FAQ() {
         </Typography>
 
         {faqData.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
           <Accordion
             key={index}
             disableGutters
@@ -86,6 +94,7 @@ function FAQ() {
               </Typography>
             </AccordionDetails>
           </Accordion>
+          </motion.div>
         ))}
       </Container>
     </div>
