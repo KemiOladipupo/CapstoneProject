@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+src/assets/images/tablesetting.jpg
+src/assets/images/bg-2.jpg
+src/assets/images/tableSet.jpg

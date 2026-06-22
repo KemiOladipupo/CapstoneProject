@@ -6,7 +6,7 @@ function ContactUs () {
 return(
     <>
     <Contact/>
-    <FAQ/>
+    <FAQ className="mt-2" />
     <Footer/>
     </>
 )

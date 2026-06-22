@@ -4,7 +4,7 @@ import user1 from "../images/user1.jpg";
 import user2 from "../images/user2.jpg";
 import user3 from "../images/user3.jpg";
 import userMan from "../images/user-man.jpg";
-import hero from "../images/daisy.jpg";
+import daisy from "../images/daisy.jpg";
 import { motion } from "framer-motion";
 
 function Reviews() {
@@ -58,7 +58,7 @@ function Reviews() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
       className="relative h-full w-full overflow-hidden bg-cover bg-center bg-no-repeat px-[16px] md:px-[60px] lg:px-[100px] py-[50px] md:py-[100px]"
-      style={{ backgroundImage: `url(${hero})` }}
+      style={{ backgroundImage: `url(${daisy})` }}
     >
       <div className="absolute inset-0 bg-[var(--textColor)]/70"></div>
       <div className="max-w-6xl mx-auto flex flex-col gap-10 ">
@@ -88,9 +88,9 @@ function Reviews() {
           {reviews.map((review, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay:0.1 }}
               viewport={{ once: true, amount: 0.2 }}
               className={`group relative flex flex-col items-center text-center p-6 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-xl md:max-w-[400px]
               ${
@@ -103,11 +103,9 @@ function Reviews() {
               }}
             >
               {/* image */}
-              <motion.img
+              <img
                 src={review.image}
                 alt={review.name}
-                whileHover={{ scale: 1.08 }}
-                transition={{ duration: 0.3 }}
                 className="w-16 h-16 rounded-full object-cover mb-3 z-10"
               />
 
