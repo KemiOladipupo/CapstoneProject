@@ -42,7 +42,7 @@ function Hero() {
           className="flex items-center gap-2 md:gap-8 mt-8"
         >
           <Link
-            to="/about"
+            to="/aboutUs"
             className=" bg-[var(--main-color)] text-sm font-semibold px-[20px] md:px-[40px] py-[10px] rounded-lg hover:scale-105 hover:bg-[var(--tertiary-color)] transition-all delay-1 duration-300 ease-in-out"
           >
             Learn More
